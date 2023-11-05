@@ -1,0 +1,36 @@
+import java.util.*;
+class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("CURRENCY CONVERTER");
+         System.out.println("1.RUPPES\n"+"2.DOLLAR\n"+"3.EURO\n"+"4.EXIT\n");
+        Scanner sc=new Scanner(System.in);
+        System.out.println("ENTER YOUR CHOICE");
+         int ch=sc.nextInt();
+        System.out.println("ENTER AMOUNT");
+        double amount=sc.nextDouble();
+       
+            switch(ch){
+                case 1:ruppee(amount);
+                break;
+                case 2:dollar(amount);
+                break;
+                case 3:euro(amount);
+                break;
+                default:System.out.println("Invalid choice");
+                
+            }
+        
+    }
+    public static void ruppee(double amount){
+        System.out.println(amount+" Ruppe = " + (amount*0.013) + " Dollar");
+        System.out.println(amount+" Ruppe = " + (amount*0.012) + " Euro");
+    }
+    public static void dollar(double amount){
+        System.out.println(amount+" Dollar = " + (amount*79.37) + " Ruppe");
+        System.out.println(amount+" Dollar = " + (amount*0.98) + " Euro");
+    }
+    public static void euro(double amount){
+      System.out.println(amount+" Euro = " + (amount*80.85) + " Ruppe");
+      System.out.println(amount+" Euro = " + (amount*1.02) + " Dollar");
+    }
+}
